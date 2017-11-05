@@ -2,10 +2,17 @@ Praktikum Linux Pertemuan Ke-6
 ==============================
 
 ## Daftar Isi
-- [History](#history) 
-- [Bash Script](#bash-script)
-- [Job Control](#job-control)
-- [Alias](#alias)
+- [Element dasar shell script](#element-dasar-shell-script) 
+- [Variable shell script](#variable-shell-script)
+- [Membaca input dari keyboard](#membaca-input-dari-keyboard)
+- [Parameter](#parameter)
+
+## Latihan
+- [Latihan 1 penggunaan variable](#latihan-1-penggunaan-variable)
+- [Latihan 2 menggunakan input dari keyboard](#latihan-2-menggunakan-input-dari-keyboard)
+- [Latihan 3 argumen terminal kedalam variable](#latihan-3-argumen-terminal-kedalam-variable)
+- [Latihan 4 bash script dengan argument terminal](#latihan-4-bash-script-dengan-argument-terminal)
+- [Latihan 5 bash script parameter](#latihan-5-bash-script-parameter)
 
 
 Element dasar shell script
@@ -52,10 +59,12 @@ Nilai variable dapat berupa masukan melalui ketikan dari keyboard, dengan menggu
 
 Parameter
 =========
-Program bash shell dapat mempunyai parameter sebanyak 9 parameter dan direpresentasikan melalui variable khusus yaitu `$1,$2,$3,$4,$5,$6,$7,$8,$9` bila tidak memberikan parameter maka nilai dari $# adalah 0
+Program bash shell dapat mempunyai parameter sebanyak 9 parameter dan direpresentasikan melalui variable khusus yaitu `$1,$2,$3,$4,$5,$6,$7,$8,$9` bila tidak memberikan parameter maka nilai dari `$#` adalah `0`.
+```
 Shell variable `$*` menyatakan seluruh string menjadi parameter atau argumen sebuah script.
-Shell variable `$$` menyatakan nomor proses id (PID) dari script yang dijalankan. proses PID ini akan terus berubah apabila dilakukan eksekusi (umumnya perubahan secara increment)
-
+Shell variable `$$` menyatakan nomor proses id (PID) dari script yang dijalankan. 
+proses PID ini akan terus berubah apabila dilakukan eksekusi (umumnya perubahan secara increment)
+```
 
 Latihan 1 penggunaan variable
 =============================
@@ -113,8 +122,8 @@ read pekerjaan
 4. Eksekusi file `biodata2.sh`
 
 
-Latihan 4 memasukan hasil perintah terminal kedalam variable
-============================================================
+Latihan 3 argumen terminal kedalam variable
+===========================================
 Hasil eksekusi argument pada terminal dapat dimasukan kedalam variable dengan memasukan perintah tersebut diantara tanda petik terbalik 
 ```
 nama_variable=`argument`
@@ -125,12 +134,12 @@ ME=`whoami`
 echo $ME
 ```
 
-Latihan 5 bash script dengan argument terminal
+Latihan 4 bash script dengan argument terminal
 ==============================================
-Buat file `biodata3.sh` dengan isi code bash sebagai berikut:
+Buat file `direktori_password.sh` dengan isi code bash sebagai berikut:
 ```
 #!/bin/sh
-# Biodata 3
+# password direktori
 #
 echo -n "Masukan password : "
 read PASSWORD
@@ -140,4 +149,24 @@ then
 	echo "direktori saya : $HOME"
 fi
 ```
+
+Latihan 5 bash script parameter
+===============================
+1. Buat file `biodata3.sh` kemudian isi dengan code bash sebagai berikut:
+```
+#!/bin/sh
+# bash parameter
+#
+echo "Jumlah parameter yang dimasukan : $#"
+echo "Nama program : $0"
+echo "Parameter 1 : $1"
+echo "Parameter 2 : $2"
+echo "Parameter 3 : $3"
+echo "Total parameter : $*"
+echo "PID program ini : $$"
+```
+
+2. Eksekusi program `biodata3.sh` tersebut
+
+*`pwcahyo@gmail.com`*
 
