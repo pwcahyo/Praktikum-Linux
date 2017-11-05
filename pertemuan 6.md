@@ -35,6 +35,7 @@ NAMA =cahyo		#salah
 NAMA= cahyo		#salah
 ```
 sedangkan untuk mencetak isi dari variable dapat menggunakan tanda `$` didepan nama variable tersebut kemudian memanfaatkan fungsi echo untuk dapat menampilkan isi variable tersebut. sebagai contoh:
+```
 NAMA=cahyo
 echo $NAMA
 
@@ -43,7 +44,7 @@ echo $UMUR
 echo $NAMA $UMUR
 ```
 penggunaan string lebih dari satu kata harus diantara tanda kutip, sebagai contoh:
-$NAMA="Puji Winar Cahyo"
+`$NAMA="Puji Winar Cahyo"`
 
 Membaca input dari keyboard
 ===========================
