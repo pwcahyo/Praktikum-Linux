@@ -95,6 +95,19 @@ echo
 echo "Biodata saya : $nama, $hobi, $pekerjaan"
 ```
 
+3. Perintah echo akan memunculkan baris baru pada command line, untuk menghindari hala tersebut dapat menggunakan argument `-n` untuk menghilangkan baris baru. edit file `biodata2.sh` kemudian tambahkan `-n` setelah echo.
+```
+echo -n "Nama saya : "
+read nama
+echo -n "Hobi : "
+read hobi
+echo -n "Pekerjaan : "
+read pekerjaan
+```
+4. Eksekusi file `biodata2.sh`
+
+
+
 History diadaptasi dari C-Shell, yaitu catatan dari semua instruksi yang sejauh ini telah dilakukan. Catatan ini dapat dilihat sebagai history, kemudian dapat dipilih kembali, diedit dan dieksekusi. History memudahkan pemakai untuk mengedit kembali instruksi kompleks dan panjang, terutama bila terjadi kesalahan pada penulisan instruksi maupun parameter.
 
 Segala perintah yang telah dijalankan sebelumnya (history), dapat dilihat pada file `.bash_history` pada direktori `HOME` masing - masing.
