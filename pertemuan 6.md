@@ -105,3 +105,11 @@ echo -n "Pekerjaan : "
 read pekerjaan
 ```
 4. Eksekusi file `biodata2.sh`
+
+
+Latihan 4 memasukan hasil perintah terminal kedalam variable
+============================================================
+Hasil eksekusi argument pada terminal dapat dimasukan kedalam variable dengan memasukan perintah tersebut diantara tanda petik terbalik `nama_variable=`argument``, sebagai contoh sebagai berikut:
+```
+DIR=`a`
+```
