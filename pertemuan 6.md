@@ -50,6 +50,12 @@ Membaca input dari keyboard
 ===========================
 Nilai variable dapat berupa masukan melalui ketikan dari keyboard, dengan menggunakan instruksi *read*
 
+Parameter
+=========
+Program bash shell dapat mempunyai parameter sebanyak 9 parameter dan direpresentasikan melalui variable khusus yaitu `$1,$2,$3,$4,$5,$6,$7,$8,$9` bila tidak memberikan parameter maka nilai dari $# adalah 0
+Shell variable `$*` menyatakan seluruh string menjadi parameter atau argumen sebuah script.
+Shell variable `$$` menyatakan nomor proses id (PID) dari script yang dijalankan. proses PID ini akan terus berubah apabila dilakukan eksekusi (umumnya perubahan secara increment)
+
 
 Latihan 1 penggunaan variable
 =============================
@@ -109,7 +115,29 @@ read pekerjaan
 
 Latihan 4 memasukan hasil perintah terminal kedalam variable
 ============================================================
-Hasil eksekusi argument pada terminal dapat dimasukan kedalam variable dengan memasukan perintah tersebut diantara tanda petik terbalik `nama_variable=`argument``, sebagai contoh sebagai berikut:
+Hasil eksekusi argument pada terminal dapat dimasukan kedalam variable dengan memasukan perintah tersebut diantara tanda petik terbalik 
 ```
-DIR=`a`
+nama_variable=`argument`
 ```
+sebagai contoh sebagai argumen diterminal sebagai berikut:
+```
+ME=`whoami`
+echo $ME
+```
+
+Latihan 5 bash script dengan argument terminal
+==============================================
+Buat file `biodata3.sh` dengan isi code bash sebagai berikut:
+```
+#!/bin/sh
+# Biodata 3
+#
+echo -n "Masukan password : "
+read PASSWORD
+if [ $PASSWORD = "cahyo" ]
+then
+	HOME=`pwd`
+	echo "direktori saya : $HOME"
+fi
+```
+
