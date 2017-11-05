@@ -1,18 +1,21 @@
 Praktikum Linux Pertemuan Ke-6
 ==============================
 
-## Daftar Isi
+## Daftar Isi Materi
 - [Element dasar shell script](#element-dasar-shell-script) 
 - [Variable shell script](#variable-shell-script)
 - [Membaca input dari keyboard](#membaca-input-dari-keyboard)
 - [Parameter](#parameter)
 
-## Latihan
+## Daftar Latihan
 - [Latihan 1 penggunaan variable](#latihan-1-penggunaan-variable)
 - [Latihan 2 menggunakan input dari keyboard](#latihan-2-menggunakan-input-dari-keyboard)
 - [Latihan 3 argumen terminal kedalam variable](#latihan-3-argumen-terminal-kedalam-variable)
 - [Latihan 4 bash script dengan argument terminal](#latihan-4-bash-script-dengan-argument-terminal)
 - [Latihan 5 bash script parameter](#latihan-5-bash-script-parameter)
+
+## More
+- [wiki cheat](http://wiki.bash-hackers.org/commands/classictest)
 
 
 Element dasar shell script
@@ -167,6 +170,7 @@ echo "PID program ini : $$"
 ```
 
 2. Eksekusi program `biodata3.sh` tersebut
+---
 
-*`pwcahyo@gmail.com`*
+*`pwcahyo@gmail.com`* :shipit:
 
