@@ -8,7 +8,7 @@ Praktikum Linux Pertemuan Ke-6
 - [Alias](#alias)
 
 
-Element dasar shell script
+1. Element dasar shell script
 ==========================
 
 Shell script umumnya dibuat dengan editor teks (ASCII editor) dengan file ekstensi `.sh`. Shell script tersebut selalu diawali dengan komentar yang dimulai dengan tanda `#` kemudian diikuti dengan tanda `!` kemudian nama shell yang digunakan. seperti contoh berikut
@@ -17,6 +17,17 @@ Shell script umumnya dibuat dengan editor teks (ASCII editor) dengan file eksten
 # Program Shell
 #
 ```
+
+2. Variable shell script
+========================
+Variable shell  digunakan untuk menampung berbagai macam data yang nantinya dapat digunakan untuk operasi selanjutnya, penulisan variable shell adalah sebagai berikut : 
+```
+nama_var = nilai_var
+```
+nama variable harus dimulai dengan alphabet kemudian disusul dengan alfanumerik maupun karakter lain. variable dapat ditulis menggunakan huruf kecil atau huruf besar atau campuran keduanya *(case sensitive)*:
+
+
+
 History diadaptasi dari C-Shell, yaitu catatan dari semua instruksi yang sejauh ini telah dilakukan. Catatan ini dapat dilihat sebagai history, kemudian dapat dipilih kembali, diedit dan dieksekusi. History memudahkan pemakai untuk mengedit kembali instruksi kompleks dan panjang, terutama bila terjadi kesalahan pada penulisan instruksi maupun parameter.
 
 Segala perintah yang telah dijalankan sebelumnya (history), dapat dilihat pada file `.bash_history` pada direktori `HOME` masing - masing.
