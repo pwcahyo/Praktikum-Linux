@@ -25,8 +25,74 @@ Variable shell  digunakan untuk menampung berbagai macam data yang nantinya dapa
 nama_var = nilai_var
 ```
 nama variable harus dimulai dengan alphabet kemudian disusul dengan alfanumerik maupun karakter lain. variable dapat ditulis menggunakan huruf kecil atau huruf besar atau campuran keduanya *(case sensitive)*:
+```
+NAMA=cahyo
+j=5
+```
+Penggunaan nama variable tidak boleh dipisahkan menggunakan spasi ataupun tanda baca yang lain. Dikarenakan shell akan mengenali pemisahan tersebut sebagai parameter, seperti contoh berikut
+```
+NAMA =cahyo		#salah
+NAMA= cahyo		#salah
+```
+sedangkan untuk mencetak isi dari variable dapat menggunakan tanda `$` didepan nama variable tersebut kemudian memanfaatkan fungsi echo untuk dapat menampilkan isi variable tersebut. sebagai contoh:
+NAMA=cahyo
+echo $NAMA
+
+UMUR=12
+echo $UMUR
+echo $NAMA $UMUR
+```
+penggunaan string lebih dari satu kata harus diantara tanda kutip, sebagai contoh:
+$NAMA="Puji Winar Cahyo"
+
+Membaca input dari keyboard
+===========================
+Nilai variable dapat berupa masukan melalui ketikan dari keyboard, dengan menggunakan instruksi *read*
 
 
+Latihan 1 penggunaan variable
+=============================
+1. Buat file biodata.sh dengan isi code bash shell sebagai berikut
+```
+#!/bin/sh
+# Biodata
+#
+nama=cahyo
+hobi=coding
+pekerjaan=mahasiswa
+```
+
+2. Menggabungkan beberapa string kedalam satu cetak, *edit file* `biodata.sh` kemudian tambahkan :
+```
+echo "Biodata Saya"
+echo nama:${nama}
+echo hobi:${hobi}
+echo pekerjaan:${pekerjaan}
+```
+
+3. Eksekusi file bash `./biodata.sh` dengan terlebih dahulu merubah permission file menjadi executable
+
+Latihan 2 menggunakan input dari keyboard
+=========================================
+1. Buat file `biodata2.sh` kemudian isikan code bash shell sebagai berikut:
+
+```
+#!/bin/sh
+# Biodata 2
+#
+echo "Nama saya : "
+read nama
+echo "Hobi : "
+read hobi
+echo "Pekerjaan : "
+read pekerjaan
+```
+
+2. Tambahkan kode berikut untuk menampilkan hasil input:
+```
+echo
+echo "Biodata saya : $nama, $hobi, $pekerjaan"
+```
 
 History diadaptasi dari C-Shell, yaitu catatan dari semua instruksi yang sejauh ini telah dilakukan. Catatan ini dapat dilihat sebagai history, kemudian dapat dipilih kembali, diedit dan dieksekusi. History memudahkan pemakai untuk mengedit kembali instruksi kompleks dan panjang, terutama bila terjadi kesalahan pada penulisan instruksi maupun parameter.
 
