@@ -1,7 +1,9 @@
+Kerjakan soab berikut pada MS Word. format penamaan file MS Word `nim-nama-tugaslinux` (semua pengerjaan wajib screenshot)
+
 Soal 1
 ======
 
-Buatlah file bash menggunakan menggunakan parameter untuk menangani penghitungan luas segitiga dengan syarat sebagai berikut: (screenshot code bash dan hasil program dijalankan) `luas segitiga:(alas*tinggi)/2`
+Buatlah file bash dengan nama `segitiga.sh` menggunakan parameter untuk menangani penghitungan luas segitiga dengan syarat sebagai berikut: (screenshot code bash dan hasil program dijalankan) `luas segitiga:(alas*tinggi)/2`
 
 - Parameter
 ```
@@ -20,11 +22,12 @@ e. Print PID program
 
 Soal 2
 ======
-Buatlah file bash untuk melakukan checking aktif user pada sebuah server. pengecekan selama 5 detik sekali, hasil dari checking tersebut akan dicetak menggunakan print. (checking user diterminal menggunakan `who`) (screenshot code bash dan hasil program dijalankan selama 10 detik)
+Buatlah file bash dengan nama `check_user.sh` untuk melakukan checking aktif user pada sebuah server. pengecekan selama 5 detik sekali, hasil dari checking tersebut akan dicetak menggunakan print. (checking user diterminal menggunakan `who`) (screenshot code bash dan hasil program dijalankan selama 10 detik)
 
 Soal 3
 ======
-Buatlah file bash untuk memasukan nama dari keyboard dan mencetak nama yang dimasukan tersebut. Dengan syarat apabila memasukan nama sendiri maka program tersebut baru bisa berhenti. `membaca masukan dari keyboard menggunakan *read*`
+Buatlah file bash dengan nama `input_nama.sh` untuk memasukan nama dari keyboard dan mencetak nama yang dimasukan tersebut. Dengan syarat apabila memasukan nama sendiri maka program tersebut baru bisa berhenti. `membaca masukan dari keyboard menggunakan *read*` (screenshot code bash dan hasil program dijalankan)
+
 simulasi
 ```
 Masukan Nama : 
