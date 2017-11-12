@@ -1,4 +1,6 @@
-Kerjakan soab berikut pada MS Word. format penamaan file MS Word `nim-nama-tugaslinux` (semua pengerjaan wajib screenshot)
+Perintah Soal
+=============
+Kerjakan soal berikut pada MS Word. format penamaan file MS Word `nim-nama-tugaslinux` (semua pengerjaan wajib screenshot)
 
 Soal 1
 ======
