@@ -1,5 +1,5 @@
-Perintah Soal
-=============
+Perintah Soal Kode Bash
+=======================
 Kerjakan soal berikut pada MS Word. format penamaan file MS Word `nim-nama-tugaslinux` (semua pengerjaan wajib screenshot)
 
 Soal 1
