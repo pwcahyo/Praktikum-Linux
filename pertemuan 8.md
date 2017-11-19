@@ -54,24 +54,28 @@ printf "$DATE\n$WHO\n\n" >> history_user.log
 ```
 `printf` merupakan perintah cetak output sederhana seperti echo akan tetapi lebih flexible dengan penambahan `\n` untuk menambahkan baris baru secara custom. Perintah `date` adalah perintah untuk melihat tanggal waktu sekarang. Perintah `who` digunakan untuk melihat user log. sedangkan tanda `$` diikuti nama variable adalah digunakan untuk mencetak isi variable yang telah didefinisikan sebelumnya.
 
-2. Mendefinisikan periodecaly waktu eksekusi program dengan crontab
+2. Ubah file `history_user.sh` menjadi executable
+
+3. Definisikan  periodecaly waktu eksekusi program, setiap jam 23 pada menit 59
 ```
 crontab -e
 ```
-kemudian gunakan editor nano untuk melakukan editing isi dari file crontab. format waktu untuk menjalankan crontab
 ```
-.---------------- minute (0 - 59)
-|  .------------- hour (0 - 23)
-|  |  .---------- day of month (1 - 31)
-|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
-|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
-|  |  |  |  |
-*  *  *  *  *  command to be executed
+01 01 * * * ./history_user.sh
 ```
-contoh pendefinisian waktu crontab:
-```
-01 01 * * * history.sh
-```
+secara otomatis crontab akan berjalan meskipun user logout dari system.
 
+4. Check crontab pwcahyo yang sedang berjalan.
+```
+crontab -u pwcahyo -l
+```
+*Apabila ingin melihat crontab user lain, pastikan user yang melihat merupakan user root* 
 
-3.
+5. Untuk menghentikan crontab dapat menggunakan 
+```
+crontab -r
+``` 
+
+Tugas Crontab
+=============
+Buat satu buah file bash dengan nama `home_detail.sh` untuk melihat list folder home secara detail pada setiap `bulan, tanggal 1, jam 10.30 Malam`. hasil listing tersebut disimpan secara append kedalam file `home_file.log`
