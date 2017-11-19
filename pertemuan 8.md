@@ -3,7 +3,7 @@ Cron (System Daemon)
 
 Cron adalah sebuah sistem daemon yang digunakan untuk melakukan eksekusi pekerjaan (task) secara background process pada waktu tertentu.
 
-Setiap user (termasuk root) memiliki crontab file. Cron daemon melakukan pengecekan crontab user, tidak peduli apakah user benar - benar login kedalam sistem atau tidak.
+Setiap user (termasuk root) memiliki crontab file. Cron daemon dapat melakukan pengecekan crontab user, tidak peduli apakah user yang menjalankan crontab `sedang login` kedalam sistem atau tidak.
 
 melihat manual dari crontab dapat menggunakan `man crontab`
 
@@ -13,13 +13,38 @@ Perintah pada crontab
 crontab [-u user] file
 ```
 ```
-crontab [-u user] [-l | -r | -e] [-i] [-s]
+crontab [-u user] [i] {-l | -r | -e}
 ```
+Keterangan:
+```
+-u user : Spesifik user cron
+-l : melihat crontab list
+-r : remove crontab yang sedang berjalan
+-e : edit crontab dengan editor secara spesifik
+-i : remove crontab dengan konfirmasi
+
+```
+
+Format Waktu Crontab
+====================
+Crontab memiliki format waktu eksekusi, format waktu tersebut adalah sebagai berikut:
+```
+.---------------- minute (0 - 59)
+|  .------------- hour (0 - 23)
+|  |  .---------- day of month (1 - 31)
+|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+|  |  |  |  |
+*  *  *  *  *  command to be executed
+```
+tanda bintang merupakan tidak ditentukan pada waktu tersebut.
+contoh : `01 * * * * ./klik.sh` *file bash klik.sh akan dieksekusi setiap menit kesatu pada setiap jamnya*
+
 
 Menggunakan Cron
 ================
 
-1. Definisikan program yang akan dijalankan. berikut program untuk checking history log user active. `history_user.sh`
+1. Definisikan program yang akan dijalankan. berikut program untuk checking history log user active pada sebuah server linux ubuntu. `history_user.sh`
 ```
 #!/bin/sh
 
