@@ -40,10 +40,20 @@ Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user accoun
 - Aplikasi secara Graphical User Management.
 - Perintah menggunakan terminal.
 
-Berikut ini adalah perintah umum yang digunakan untuk memanajemen user account dan group :
+Berikut ini adalah perintah umum yang digunakan untuk memanajemen user :
 - **useradd** perintah menambah user account.
 - **userdel** perintah hapus user account.
 - **usermod** perintah editing attribut account termasuk beberapa fungsi yang berhubungan dengan masa berlaku password Juga digunakan untuk menentukan keanggotaan primer dan sekunder.
-- **passwd** 
+- **passwd** perintah untuk setting password dan juga untuk melakukan kontrol semua aspek tentang masa berlaku password.
+- **chpasswd** perintah untuk membaca file yang berisi username dan password. update password untuk setiap user.
+- **chage** perintah untuk mengubah masa berlaku password (hampir sama dengan passwd).
+- **chfn** perintah untuk mengubah informasi GECOS user.
+- **chsh** perintah untuk mengubah shell default user.
 
+Berikut merupakan perintah umum yang digunakan untuk memanajemen group :
+- **groupadd** perintah untuk menambahkan group, (akan tetapi tidak menentukan anggota user pada group tersebut). `useradd` dan `usermod` digunakan untuk menentukan user dimasukan kedalam group yang sudah ada.
+- **groupdel** perintah untuk menghapus group
+- **groupmod** perintah untuk memodifikasi nama group atau group id (GID). akan tetapi tidak mengubah keanggotan group.
+- **gpasswd** perintah untuk mengubah keanggotaan group dan melakukan setting password untuk mengijinkan anggota selain group tersebut untuk bergabung. (digunakan juga untuk menentukan administrator group).
+- ***grpck* perintah untuk memeriksa integritas file /etc/group dan /etc/gshadow
 
