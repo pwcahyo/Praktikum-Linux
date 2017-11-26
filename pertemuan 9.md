@@ -12,15 +12,15 @@ zero:x:1001:1001:,,,:/home/zero:/bin/bash
 ```
 Keterangan :
 - **zero** sebagai **_username_** : nama user yang diketik saat login sistem
-- x sebagai *password* : berisi password user yang dienkripsi (atau x bila shadow password digunakan)
-- 1001 sebagai *user id (UID)* : bilangan numerik secara unique sebagai id username
-- 1001 sebagai *group id (GID)* : bilangan numerik secara unique sebagai id group
-- ,,, sebagai *gecos* : nama histori, kolom gecos bersifat optiona dan digunakan untuk menyimpan informasi tambahan (seperti nama lengkap user)
-- /home/zero sebagai *home directory* : path absolute, lokasi direktori user
-- /bin/bash sebagai *shell* : program otomatis dijalankan bila user login. berupa intepreter (shell)
+- **x** sebagai **_password_** : berisi password user yang dienkripsi (atau x bila shadow password digunakan)
+- **1001** sebagai **_user id (UID)_** : bilangan numerik secara unique sebagai id username
+- **1001** sebagai **_group id (GID)_** : bilangan numerik secara unique sebagai id group
+- **,,,** sebagai **_gecos_** : nama histori, kolom gecos bersifat optiona dan digunakan untuk menyimpan informasi tambahan (seperti nama lengkap user)
+- **/home/zero** sebagai **_home directory_** : path absolute, lokasi direktori user
+- **/bin/bash** sebagai **_shell_** : program otomatis dijalankan bila user login. berupa intepreter (shell)
 
 
-2. File `/etc/group`
+Melihat daftar group
 ====================
 Untuk melihat daftar group yang dipisahkan perbaris maka kita dapat mengakses file `/etc/group` Didalamnya terdapat beberapa informasi mengenai `group name`, `group password`, `group id` dan `member list`.
 Pemisahan informasi tersebut menggunakan tanda `:` pada informasi yang dimiliki oleh setiap group.
@@ -30,10 +30,10 @@ root:x:0:zero
 ```
 Keterangan :
 ```
-root sebagai *group name*
-x sebagai *group password*  : x apabila shadow password digunakan
-0 sebagai *group id (GID)* : bilangan numerik secara unique sebagai id group
-zero sebagai *anggota group* : daftar user yang berada pada group tersebut
+**root** sebagai **_group name*
+**x** sebagai **_group password_** : x apabila shadow password digunakan
+**0** sebagai **_group id (GID)_** : bilangan numerik secara unique sebagai id group
+**zero** sebagai **_anggota group_** : daftar user yang berada pada group tersebut
 ```
 
 
