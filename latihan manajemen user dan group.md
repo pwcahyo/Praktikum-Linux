@@ -18,9 +18,13 @@ Buat 2 buah user dengan nama :
 Tambahkan informasi user secara umum pada :
 ===========================================
 - [user masing-masing]_pertama 
+```
 Ini adalah [user masing-masing] yang pertama
+```
 - [user masing-masing]_kedua
+```
 Ini adalah [user masing-masing] yang kedua
+```
 
 Masukan user kedalam group
 ==========================
