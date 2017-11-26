@@ -48,6 +48,11 @@ Perintah untuk menambah user account. perintah dibawah adalah contoh penambahan 
 ```
 useradd pwcahyo
 ```
+perintah untuk menciptakan user `pwcahyo` secara langsung memasukan user kedalam group yang sudah ada, yaitu group `pwcahyo_member`
+```
+useradd -g pwcahyo_member pwcahyo
+```
+
 userdel 
 =======
 Perintah untuk menghapus user account. perintah dibawah ini contoh perintah hapus user dengan nama `pwcahyo`
@@ -75,6 +80,19 @@ mkdir /home/pwcahyo/home_new
 usermod -d /home/pwcahyo/home_new pwcahyo
 ```
 melihat hasil penggantian direktori home menggunakan `grep -E --color '/home/pwcahyo/home_new' /etc/passwd`.
+-  ### modifikasi group pada user account 
+Modifikasi group untuk dimasukan kedalam kelompok group primer atau sekunder. contoh berikut melakukan modifikasi user account `pwcahyo` dengan group sekunder `pwcahyo_secretary` dan `pwcahyo_servant`. kemudian memiliki group primer `pwcahyo_member`.
+```
+usermod -g pwcahyo_member -G pwcahyo_secretary,pwcahyo_servant pwcahyo
+```
+untuk melakukan checking group yang dimiliki `pwcahyo` dapat menggunakan perintah sebagai berikut.
+```
+id pwcahyo
+```
+- ### Mengganti password menggunakan `usermod`. perintah berikut merupakan contoh perintah penggantian password pada user account `pwcahyo` dengan password baru `linux`
+```
+usermod -p linux pwcahyo
+```
 
 passwd
 ======
@@ -102,15 +120,56 @@ berikut ini contoh perintah untuk melihat masa berlaku password:
 ```
 chage -l pwcahyo
 ```
-
-- **chfn** perintah untuk mengubah informasi GECOS user.
-- **chsh** perintah untuk mengubah shell default user.
+chfn
+====
+Perintah untuk mengubah informasi umum user account. berikut contoh perintah untuk mengubah informasi umum mengenai user `pwcahyo`
+```
+chfn pwcahyo
+```
+chsh
+====
+Perintah untuk mengubah shell default user.
 
 Perintah manajemen group
 ========================
-- **groupadd** perintah untuk menambahkan group, (akan tetapi tidak menentukan anggota user pada group tersebut). `useradd` dan `usermod` digunakan untuk menentukan user dimasukan kedalam group yang sudah ada.
-- **groupdel** perintah untuk menghapus group
-- **groupmod** perintah untuk memodifikasi nama group atau group id (GID). akan tetapi tidak mengubah keanggotan group.
-- **gpasswd** perintah untuk mengubah keanggotaan group dan melakukan setting password untuk mengijinkan anggota selain group tersebut untuk bergabung. (digunakan juga untuk menentukan administrator group).
-- ***grpck* perintah untuk memeriksa integritas file /etc/group dan /etc/gshadow
+Beberapa perintah untuk memanajemen group adalah sebagai berikut:
+
+groupadd
+========
+Perintah untuk menambahkan group, (akan tetapi tidak menentukan anggota user pada group tersebut). contoh berikut menambahkan group baru dengan nama `pwcahyos_member`, `pwcahyo_secretary` dan `pwcahyo_servant`.
+```
+groupadd pwcahyos_member
+groupadd pwcahyo_secretary
+groupadd pwcahyo_servant
+
+```
+untuk memasukan user yang sudah ada kedalam group dapat menggunakan `useradd` dan `usermod`. 
+
+groupdel
+========
+Perintah untuk menghapus group. contoh berikut perintah untuk menghapus group `pwcahyo_secretary` dan `pwcahyo_servant`
+```
+groupdel pwcahyo_secretary
+groupdel pwcahyo_servant
+```
+groupmod
+========
+Perintah untuk memodifikasi nama group atau group id (GID). akan tetapi tidak mengubah keanggotan group. contoh berikut merubah nama group `pwcahyo_servant` menjadi `pwcahyo_assistant`
+```
+groupmod -n pwcahyo_assistant pwcahyo_servant
+```
+gpasswd
+=======
+Perintah untuk mengubah keanggotaan group dan melakukan setting password untuk mengijinkan anggota selain group tersebut untuk bergabung. (digunakan juga untuk menentukan administrator group).
+Contoh perintah memasukan single user `pwcahyo` kedalam group aktif `pwcahyo_servant`
+```
+gpasswd -a pwcahyo pwcahyo_servant
+```
+Contoh perintah memasukan multiple user `pwcahyo`, `mark`, `kate` kedalam group yang sudah aktif, yaitu group `pwcahyo_member`
+```
+gpasswd -M pwcahyo, mark, kate pwcahyo_member
+```
+grpc
+====
+perintah untuk memeriksa integritas file /etc/group dan /etc/gshadow
 
