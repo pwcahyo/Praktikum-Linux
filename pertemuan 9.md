@@ -75,9 +75,27 @@ mkdir /home/pwcahyo/home_new
 usermod -d /home/pwcahyo/home_new pwcahyo
 ```
 melihat hasil penggantian direktori home menggunakan `grep -E --color '/home/pwcahyo/home_new' /etc/passwd`
-- **passwd** perintah untuk setting password dan juga untuk melakukan kontrol semua aspek tentang masa berlaku password.
-- **chpasswd** perintah untuk membaca file yang berisi username dan password. update password untuk setiap user.
-### **chage** 
+passwd
+======
+Perintah untuk setting password.
+```
+passwd pwcahyo
+```
+chpasswd
+========
+Perintah mengubah password secara bulk mode (update passwod secara banyak user).
+```
+chpasswd
+```
+kemudian masukan update password, contoh berikut username `pwcahyo` dirubah passwordnya menjadi `cahyo`. username `zero` menjadi `nol`.
+```
+pwcahyo:cahyo
+zero:nol
+```
+selesai memasukan update password kemudian tekan `Ctrl+c`
+
+chage
+===== 
 Perintah untuk melihat dan mengubah masa berlaku password (hampir sama dengan passwd). 
 berikut ini contoh perintah untuk melihat masa berlaku password:
 ```
