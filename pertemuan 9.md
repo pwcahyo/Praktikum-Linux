@@ -29,9 +29,20 @@ berikut ini contoh daftar user yang berada pada file `/etc/group`.
 root:x:0:zero
 ```
 **Keterangan :**
-- **root** sebagai **_group name*
+- **root** sebagai **_group name_**
 - **x** sebagai **_group password_** : x apabila shadow password digunakan
 - **0** sebagai **_group id (GID)_** : bilangan numerik secara unique sebagai id group
 - **zero** sebagai **_anggota group_** : daftar user yang berada pada group tersebut
+
+Aplikasi user account dan group
+===============================
+Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user account dan group pada sistem linux ubuntu:
+- Aplikasi secara Graphical User Management
+- Perintah menggunakan terminal
+Berikut ini adalah perintah umum yang digunakan untuk memanajemen user account dan group :
+- **useradd** perintah menambah user account
+- **userdel** perintah hapus user account
+- **usermod** perintah editing attribut account termasuk beberapa fungsi yang berhubungan dengan masa berlaku password Juga digunakan untuk menentukan keanggotaan primer dan sekunder
+- **passwd** 
 
 
