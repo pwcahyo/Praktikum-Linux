@@ -37,12 +37,13 @@ root:x:0:zero
 Aplikasi user account dan group
 ===============================
 Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user account dan group pada sistem linux ubuntu:
-- Aplikasi secara Graphical User Management
-- Perintah menggunakan terminal
+- Aplikasi secara Graphical User Management.
+- Perintah menggunakan terminal.
+
 Berikut ini adalah perintah umum yang digunakan untuk memanajemen user account dan group :
-- **useradd** perintah menambah user account
-- **userdel** perintah hapus user account
-- **usermod** perintah editing attribut account termasuk beberapa fungsi yang berhubungan dengan masa berlaku password Juga digunakan untuk menentukan keanggotaan primer dan sekunder
+- **useradd** perintah menambah user account.
+- **userdel** perintah hapus user account.
+- **usermod** perintah editing attribut account termasuk beberapa fungsi yang berhubungan dengan masa berlaku password Juga digunakan untuk menentukan keanggotaan primer dan sekunder.
 - **passwd** 
 
 
