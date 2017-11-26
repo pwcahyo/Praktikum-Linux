@@ -1,6 +1,6 @@
 Manajemen User dan Group
 ========================
-Pada Linux ubuntu, informasi mengenai user account dan groups disimpan dalam beberapa file teks, beberapa file teks tersebut berada dalam direktori `/etc/` . Melihat atau menambahkan daftar group dan daftar user misalnya. 
+Pada Linux ubuntu, informasi mengenai user account dan group disimpan dalam beberapa file teks, beberapa file teks tersebut berada dalam direktori `/etc/` . Melihat atau menambahkan daftar group dan daftar user misalnya. 
 
 Melihat daftar user
 ======================
@@ -10,7 +10,7 @@ berikut ini contoh daftar user yang berada pada file `/etc/passwd`.
 ```
 zero:x:1001:1001:,,,:/home/zero:/bin/bash
 ```
-Keterangan :
+**Keterangan :**
 - **zero** sebagai **_username_** : nama user yang diketik saat login sistem
 - **x** sebagai **_password_** : berisi password user yang dienkripsi (atau x bila shadow password digunakan)
 - **1001** sebagai **_user id (UID)_** : bilangan numerik secara unique sebagai id username
@@ -28,12 +28,10 @@ berikut ini contoh daftar user yang berada pada file `/etc/group`.
 ```
 root:x:0:zero
 ```
-Keterangan :
-```
+**Keterangan :**
 **root** sebagai **_group name*
 **x** sebagai **_group password_** : x apabila shadow password digunakan
 **0** sebagai **_group id (GID)_** : bilangan numerik secara unique sebagai id group
 **zero** sebagai **_anggota group_** : daftar user yang berada pada group tersebut
-```
 
 
