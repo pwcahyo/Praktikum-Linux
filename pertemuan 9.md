@@ -42,14 +42,14 @@ Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user accoun
 
 Beberapa perintah untuk memanajemen user account adalah sebagai berikut:
 
-useradd
-=======
+- useradd
+=========
 Perintah untuk menambah user account. perintah dibawah adalah contoh penambahan user dengan nama `pwcahyo`
 ```
 useradd pwcahyo
 ```
-userdel 
-=======
+- userdel 
+=========
 Perintah untuk menghapus user account. perintah dibawah ini contoh perintah hapus user dengan nama `pwcahyo`
 ```
 userdel -r pwcahyo
