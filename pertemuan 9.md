@@ -74,7 +74,8 @@ Perintah berikut adalah mengubah direktori home pwcahyo yaitu `/home/pwcahyo` me
 mkdir /home/pwcahyo/home_new
 usermod -d /home/pwcahyo/home_new pwcahyo
 ```
-melihat hasil penggantian direktori home menggunakan `grep -E --color '/home/pwcahyo/home_new' /etc/passwd`
+melihat hasil penggantian direktori home menggunakan `grep -E --color '/home/pwcahyo/home_new' /etc/passwd`.
+
 passwd
 ======
 Perintah untuk setting password.
