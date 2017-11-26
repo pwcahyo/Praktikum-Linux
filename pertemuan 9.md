@@ -61,13 +61,13 @@ Perintah untuk editing attribut user. secara umum penggunakan `usermod` adalah s
 usermod [options] username
 ``` 
 ada beberapa cara penggunakan `usermod` diantaranya adalah sebagai berikut:
-- menambahkan informasi user
+- ### menambahkan informasi user
 perintah berikut adalah menambahkan informasi `Ini adalah Puji Winar Cahyo` kedalam user `pwcahyo`
 ```
 usermod -c "Ini adalah Puji Winar Cahyo" pwcahyo
 ```
 melihat hasil penambahan informasi dapat menggunakan `grep -E --color 'pwcahyo' /etc/passwd`
-- merubah direktori home user
+- ### merubah direktori home user
 Perintah berikut adalah mengubah direktori home pwcahyo yaitu `/home/pwcahyo` menjadi `/home/pwcahyo/home_new`
 
 ```
