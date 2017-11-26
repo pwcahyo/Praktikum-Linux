@@ -50,7 +50,12 @@ useradd pwcahyo
 ```
 userdel -r pwcahyo
 ```
-- **usermod** perintah editing attribut account termasuk beberapa fungsi yang berhubungan dengan masa berlaku password Juga digunakan untuk menentukan keanggotaan primer dan sekunder.
+- **usermod** perintah editing attribut user. secara umum penggunakan `usermod` adalah sebagai berikut
+```
+usermod [options] username
+``` 
+ada beberapa cara penggunakan `usermod` diantaranya adalah sebagai berikut.
+
 ```
 usermod -g cahyos_member -G pwcahyo
 ```
