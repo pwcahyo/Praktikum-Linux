@@ -39,6 +39,7 @@ Aplikasi user account dan group
 Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user account dan group pada sistem linux ubuntu:
 - Aplikasi secara Graphical User Management.
 - Perintah menggunakan terminal.
+
 Beberapa perintah untuk memanajemen user account adalah sebagai berikut:
 
 useradd
