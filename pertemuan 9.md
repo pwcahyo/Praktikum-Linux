@@ -61,14 +61,28 @@ usermod [options] username
 ``` 
 ada beberapa cara penggunakan `usermod` diantaranya adalah sebagai berikut:
 #### menambahkan informasi user
+perintah berikut adalah menambahkan informasi `Ini adalah Puji Winar Cahyo` kedalam user `pwcahyo`
 ```
 usermod -c "Ini adalah Puji Winar Cahyo" pwcahyo
 ```
 melihat hasil penambahan informasi dapat menggunakan `grep -E --color 'pwcahyo' /etc/passwd`
-#### menambahkan info
+#### merubah direktori home user
+Perintah berikut adalah mengubah direktori home pwcahyo yaitu `/home/pwcahyo` menjadi `/home/pwcahyo/home_new`
+
+```
+mkdir /home/pwcahyo/home_new
+usermod -d /home/pwcahyo/home_new pwcahyo
+```
+melihat hasil penggantian direktori home menggunakan `grep -E --color '/home/pwcahyo/home_new' /etc/passwd`
 - **passwd** perintah untuk setting password dan juga untuk melakukan kontrol semua aspek tentang masa berlaku password.
 - **chpasswd** perintah untuk membaca file yang berisi username dan password. update password untuk setiap user.
-- **chage** perintah untuk mengubah masa berlaku password (hampir sama dengan passwd).
+### **chage** 
+Perintah untuk melihat dan mengubah masa berlaku password (hampir sama dengan passwd). 
+berikut ini contoh perintah untuk melihat masa berlaku password:
+```
+chage -l pwcahyo
+```
+
 - **chfn** perintah untuk mengubah informasi GECOS user.
 - **chsh** perintah untuk mengubah shell default user.
 
