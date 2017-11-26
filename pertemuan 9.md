@@ -11,15 +11,14 @@ berikut ini contoh daftar user yang berada pada file `/etc/passwd`.
 zero:x:1001:1001:,,,:/home/zero:/bin/bash
 ```
 Keterangan :
-```
-zero sebagai *username* : nama user yang diketik saat login sistem
-x sebagai *password* : berisi password user yang dienkripsi (atau x bila shadow password digunakan)
-1001 sebagai *user id (UID)* : bilangan numerik secara unique sebagai id username
-1001 sebagai *group id (GID)* : bilangan numerik secara unique sebagai id group
-,,, sebagai *gecos* : nama histori, kolom gecos bersifat optiona dan digunakan untuk menyimpan informasi tambahan (seperti nama lengkap user)
-/home/zero sebagai *home directory* : path absolute, lokasi direktori user
-/bin/bash sebagai *shell* : program otomatis dijalankan bila user login. berupa intepreter (shell)
-```
+- zero sebagai *username* : nama user yang diketik saat login sistem
+- x sebagai *password* : berisi password user yang dienkripsi (atau x bila shadow password digunakan)
+- 1001 sebagai *user id (UID)* : bilangan numerik secara unique sebagai id username
+- 1001 sebagai *group id (GID)* : bilangan numerik secara unique sebagai id group
+- ,,, sebagai *gecos* : nama histori, kolom gecos bersifat optiona dan digunakan untuk menyimpan informasi tambahan (seperti nama lengkap user)
+- /home/zero sebagai *home directory* : path absolute, lokasi direktori user
+- /bin/bash sebagai *shell* : program otomatis dijalankan bila user login. berupa intepreter (shell)
+
 
 2. File `/etc/group`
 ====================
