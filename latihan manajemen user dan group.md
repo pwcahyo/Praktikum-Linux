@@ -4,7 +4,7 @@ Buat 3 buah group dengan nama :
 - [user masing-masing]_teman
 - [user masing-masing]_manusia
 
-**_note_**
+**_note_**.
 *contoh pwcahyo_keluarga*
 
 Buat 2 buah user dengan nama :
@@ -12,7 +12,7 @@ Buat 2 buah user dengan nama :
 - [user masing-masing]_pertama
 - [user masing-masing]_kedua
 
-**_note_**
+**_note_**.
 *contoh pwcahyo_pertama*
 
 Tambahkan informasi user secara umum pada :
