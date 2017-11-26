@@ -48,12 +48,14 @@ Perintah untuk menambah user account. perintah dibawah adalah contoh penambahan 
 ```
 useradd pwcahyo
 ```
-**userdel** 
+userdel 
+=======
 Perintah untuk menghapus user account. perintah dibawah ini contoh perintah hapus user dengan nama `pwcahyo`
 ```
 userdel -r pwcahyo
 ```
-**usermod** 
+usermod
+=======
 Perintah untuk editing attribut user. secara umum penggunakan `usermod` adalah sebagai berikut
 ```
 usermod [options] username
