@@ -39,13 +39,10 @@ Aplikasi user account dan group
 Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user account dan group pada sistem linux ubuntu:
 - Aplikasi secara Graphical User Management.
 - Perintah menggunakan terminal.
-
-Perintah manajemen user
-=======================
 Beberapa perintah untuk memanajemen user account adalah sebagai berikut:
 
-**useradd** 
-===============
+useradd
+=======
 Perintah untuk menambah user account. perintah dibawah adalah contoh penambahan user dengan nama `pwcahyo`
 ```
 useradd pwcahyo
