@@ -3,8 +3,8 @@ Manajemen User dan Group
 Pada Linux ubuntu, informasi mengenai user account dan group disimpan dalam beberapa file teks, beberapa file teks tersebut berada dalam direktori `/etc/` . Melihat atau menambahkan daftar group dan daftar user misalnya. 
 
 Melihat daftar user
-======================
-Untuk melihat daftar user yang dipisahkan perbaris, kita dapat mengakses isi file pada `/etc/passwd`. Didalamnya terdapat beberapa informasi mengenai `username`, `password`, `user id`, `group id`, `deskripsi`, `direktori home` dan `shell yang digunakan`.
+===================
+Untuk melihat daftar user yang dipisahkan perbaris, kita dapat mengakses isi file pada `/etc/passwd` dengan mengetik `cat /etc/passwd`. Didalamnya terdapat beberapa informasi mengenai `username`, `password`, `user id`, `group id`, `deskripsi`, `direktori home` dan `shell yang digunakan`.
 Pemisahan informasi tersebut menggunakan tanda `:` pada informasi yang dimiliki oleh setiap user.
 berikut ini contoh daftar user yang berada pada file `/etc/passwd`.
 ```
@@ -22,7 +22,7 @@ zero:x:1001:1001:,,,:/home/zero:/bin/bash
 
 Melihat daftar group
 ====================
-Untuk melihat daftar group yang dipisahkan perbaris maka kita dapat mengakses file `/etc/group` Didalamnya terdapat beberapa informasi mengenai `group name`, `group password`, `group id` dan `member list`.
+Untuk melihat daftar group yang dipisahkan perbaris maka kita dapat mengakses file `/etc/group` dengan mengetik `cat /etc/group`  Didalamnya terdapat beberapa informasi mengenai `group name`, `group password`, `group id` dan `member list`.
 Pemisahan informasi tersebut menggunakan tanda `:` pada informasi yang dimiliki oleh setiap group.
 berikut ini contoh daftar user yang berada pada file `/etc/group`.
 ```
@@ -40,17 +40,28 @@ Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user accoun
 - Aplikasi secara Graphical User Management.
 - Perintah menggunakan terminal.
 
-Berikut ini adalah perintah umum yang digunakan untuk memanajemen user :
+Perintah manajemen user
+=======================
 - **useradd** perintah menambah user account.
+```
+useradd pwcahyo
+```
 - **userdel** perintah hapus user account.
+```
+userdel -r pwcahyo
+```
 - **usermod** perintah editing attribut account termasuk beberapa fungsi yang berhubungan dengan masa berlaku password Juga digunakan untuk menentukan keanggotaan primer dan sekunder.
+```
+usermod -g cahyos_member -G pwcahyo
+```
 - **passwd** perintah untuk setting password dan juga untuk melakukan kontrol semua aspek tentang masa berlaku password.
 - **chpasswd** perintah untuk membaca file yang berisi username dan password. update password untuk setiap user.
 - **chage** perintah untuk mengubah masa berlaku password (hampir sama dengan passwd).
 - **chfn** perintah untuk mengubah informasi GECOS user.
 - **chsh** perintah untuk mengubah shell default user.
 
-Berikut merupakan perintah umum yang digunakan untuk memanajemen group :
+Perintah manajemen group
+========================
 - **groupadd** perintah untuk menambahkan group, (akan tetapi tidak menentukan anggota user pada group tersebut). `useradd` dan `usermod` digunakan untuk menentukan user dimasukan kedalam group yang sudah ada.
 - **groupdel** perintah untuk menghapus group
 - **groupmod** perintah untuk memodifikasi nama group atau group id (GID). akan tetapi tidak mengubah keanggotan group.
