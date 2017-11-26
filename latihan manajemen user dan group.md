@@ -25,6 +25,7 @@ Ini adalah [user masing-masing] yang pertama
 ```
 Ini adalah [user masing-masing] yang kedua
 ```
+Kemudian tampilkan hasil perubahan menggunakan `grep`
 
 Masukan user kedalam group
 ==========================
