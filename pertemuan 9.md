@@ -80,7 +80,12 @@ mkdir /home/pwcahyo/home_new
 usermod -d /home/pwcahyo/home_new pwcahyo
 ```
 melihat hasil penggantian direktori home menggunakan `grep -E --color '/home/pwcahyo/home_new' /etc/passwd`.
--  ### modifikasi group pada user account 
+- ### Memasukan user account kedalam group dengan usermod
+Perintah berikut memasukan user `pwcahyo` kedalam primer group `pwcahyo_member`
+```
+usermod -g pwcahyo_member pwcahyo
+```
+- ### modifikasi group pada user account 
 Modifikasi group untuk dimasukan kedalam kelompok group primer atau sekunder. contoh berikut melakukan modifikasi user account `pwcahyo` dengan group sekunder `pwcahyo_secretary` dan `pwcahyo_servant`. kemudian memiliki group primer `pwcahyo_member`.
 ```
 usermod -g pwcahyo_member -G pwcahyo_secretary,pwcahyo_servant pwcahyo
@@ -89,7 +94,8 @@ untuk melakukan checking group yang dimiliki `pwcahyo` dapat menggunakan perinta
 ```
 id pwcahyo
 ```
-- ### Mengganti password menggunakan `usermod`. perintah berikut merupakan contoh perintah penggantian password pada user account `pwcahyo` dengan password baru `linux`
+- ### Mengganti password menggunakan `usermod`
+Perintah berikut merupakan contoh perintah penggantian password pada user account `pwcahyo` dengan password baru `linux`
 ```
 usermod -p linux pwcahyo
 ```
@@ -119,6 +125,10 @@ Perintah untuk melihat dan mengubah masa berlaku password (hampir sama dengan pa
 berikut ini contoh perintah untuk melihat masa berlaku password:
 ```
 chage -l pwcahyo
+```
+Perintah berikut ini untuk melakukan setting habis masa berlaku password (expired). Setting user `pwcahyo` dengan aktif password selama 30 hari.
+```
+chage -M 30 pwcahyo
 ```
 chfn
 ====
