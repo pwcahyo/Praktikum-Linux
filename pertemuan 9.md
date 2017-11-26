@@ -29,9 +29,9 @@ berikut ini contoh daftar user yang berada pada file `/etc/group`.
 root:x:0:zero
 ```
 **Keterangan :**
-**root** sebagai **_group name*
-**x** sebagai **_group password_** : x apabila shadow password digunakan
-**0** sebagai **_group id (GID)_** : bilangan numerik secara unique sebagai id group
-**zero** sebagai **_anggota group_** : daftar user yang berada pada group tersebut
+- **root** sebagai **_group name*
+- **x** sebagai **_group password_** : x apabila shadow password digunakan
+- **0** sebagai **_group id (GID)_** : bilangan numerik secara unique sebagai id group
+- **zero** sebagai **_anggota group_** : daftar user yang berada pada group tersebut
 
 
