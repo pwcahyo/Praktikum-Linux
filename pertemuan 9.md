@@ -42,24 +42,30 @@ Terdapat dua tipe aplikasi dasar yang dapat digunakan untuk mengatur user accoun
 
 Perintah manajemen user
 =======================
-- ### **useradd** 
-perintah menambah user account. perintah dibawah adalah menambahkan user dengan nama `pwcahyo`
+Beberapa perintah untuk memanajemen user account adalah sebagai berikut:
+
+### **useradd** 
+Perintah untuk menambah user account. perintah dibawah adalah contoh penambahan user dengan nama `pwcahyo`
 ```
 useradd pwcahyo
 ```
-- **userdel** perintah hapus user account.
+**userdel** 
+Perintah untuk menghapus user account. perintah dibawah ini contoh perintah hapus user dengan nama `pwcahyo`
 ```
 userdel -r pwcahyo
 ```
-- **usermod** perintah editing attribut user. secara umum penggunakan `usermod` adalah sebagai berikut
+**usermod** 
+Perintah untuk editing attribut user. secara umum penggunakan `usermod` adalah sebagai berikut
 ```
 usermod [options] username
 ``` 
-ada beberapa cara penggunakan `usermod` diantaranya adalah sebagai berikut.
-
+ada beberapa cara penggunakan `usermod` diantaranya adalah sebagai berikut:
+#### menambahkan informasi user
 ```
-usermod -g cahyos_member -G pwcahyo
+usermod -c "Ini adalah Puji Winar Cahyo" pwcahyo
 ```
+melihat hasil penambahan informasi dapat menggunakan `grep -E --color 'pwcahyo' /etc/passwd`
+#### menambahkan info
 - **passwd** perintah untuk setting password dan juga untuk melakukan kontrol semua aspek tentang masa berlaku password.
 - **chpasswd** perintah untuk membaca file yang berisi username dan password. update password untuk setiap user.
 - **chage** perintah untuk mengubah masa berlaku password (hampir sama dengan passwd).
