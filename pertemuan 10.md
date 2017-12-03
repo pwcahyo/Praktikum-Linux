@@ -8,9 +8,9 @@ Samba adalah paket sharing yang dapat digunakan untuk sharing printer maupun dok
 ```
 sudo apt-get install -y samba samba-common python-glade2 system-config-samba
 ```
-atau download dari repository ubuntu:
+atau download dari repository ubuntu dengan `wget`:
 ```
-http://security.ubuntu.com/ubuntu/pool/main/s/samba/samba_4.3.11+dfsg-0ubuntu0.16.04.12_amd64.deb
+wget http://security.ubuntu.com/ubuntu/pool/main/s/samba/samba_4.3.11+dfsg-0ubuntu0.16.04.12_amd64.deb
 ```
 2. Apabila samba berhasil diinstall, maka letak konfigurasi utama ada pada file:
 ```
@@ -65,7 +65,7 @@ sudo mkdir -p /samba/secure
 ```
 sudo chmod -R 0770 /samba/secure
 ```
-- Ubah kepemilikan folder.
+- Ubah kepemilikan folder dari `root` kedalam group `smbgrp`.
 ```
 sudo chown root:smbgrp /samba/secure
 ```
