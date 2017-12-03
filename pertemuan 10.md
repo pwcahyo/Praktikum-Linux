@@ -43,7 +43,7 @@ sudo service smbd restart
 ```
 
 
-### Share folder dan file hanya untuk user tertentu
+# Share folder dan file hanya untuk user tertentu
 Sharing folder dengan user terbatas, pada kasus ini hanya user pada ***smbgrp*** yang boleh melakukan akses kedalam folder ***secure*** salah satunya adalah user dengan ***user:shares dan pass:shares*** yang nanti akan kita buat. Berikut langkah - langkah yang harus dijalankan:
 - Tambahkan group baru yaitu ***smbgrp***
 ```
