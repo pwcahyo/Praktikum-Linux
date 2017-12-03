@@ -91,8 +91,8 @@ sudo service smbd restart
 ## Check hasil
 Masukan beberapa file pada folder anonymous dan folder secure. 
 kemudian lihat hasil sharing masing - masing dengan komputer lain.
-***Windows*** : buka windows-explorer kemudian ketikan `\\alamat ip` pada url bar
-***Linux*** : buka `Files` kemudian pilih `Connect to Server` masukan `smb://alamat ip`
+- ***Windows*** : buka windows-explorer kemudian ketikan `\\alamat ip` pada url bar
+- ***Linux*** : buka `Files` kemudian pilih `Connect to Server` masukan `smb://alamat ip`
 
 
 
