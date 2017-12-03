@@ -21,7 +21,7 @@ http://security.ubuntu.com/ubuntu/pool/main/s/samba/samba_4.3.11+dfsg-0ubuntu0.1
 sudo cp -pf /etc/samba/smb.conf /etc/samba/smb.conf.bak
 ```
 4. Lihat bagian `workgroup = WORKGROUP`. Untuk mengubah workgroup share dapat dilakukan edit pada `WORKGROUP` sesuaikan dengan nama jaringan workgroup yang ada. *apabila tidak ada, biarkan saja (tidak diedit)*
-5. Sharing folder dengan tanpa batas *siapa saja boleh mengakses folder ***anonymous*** tanpa harus login*.Buka file `smb.conf` tersebut menggunakan editor `nano /etc/samba/smb.conf`. kemudian tambahkan baris berikut di bagian paling bawah.
+5. Sharing folder dengan tanpa batas *siapa saja boleh mengakses folder ***anonymous*** tanpa harus login*. Buka file `smb.conf` tersebut menggunakan editor `nano /etc/samba/smb.conf`. kemudian tambahkan baris berikut di bagian paling bawah.
 ```
 [Anonymous]
 
@@ -35,7 +35,7 @@ force user = nobody
 ```
 sudo mkdir -p /samba/anonymous
 ```
-7. Sharing folder dengan user terbatas,* ***hanya user:shares dan pass:shares*** yang boleh melakukan akses folder ***shares*** *
+7. Sharing folder dengan user terbatas, * ***hanya user:shares dan pass:shares*** yang boleh melakukan akses folder ***shares*** *
 
 
 
