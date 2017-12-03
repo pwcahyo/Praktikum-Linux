@@ -3,7 +3,7 @@ Samba Sharing
 Samba adalah paket sharing yang dapat digunakan untuk sharing printer maupun dokumen salah satunya pada sistem operasi Linux. Didalam samba itu sendiri support SMB dan CIFS protocol. SMB (Server Message Block) dan CIFS (Common Internet File System) adalah standard protocol untuk sharing file, printer, serial port dan komunikasi seperti name pipes dan mail antar komputer.
 
 
-### Installing samba
+## Installing samba
 1. Buka terminal linux kemudian install samba dengan beberapa dependency yang dibutuhkan.
 ```
 sudo apt-get install -y samba samba-common python-glade2 system-config-samba
@@ -22,7 +22,7 @@ sudo cp -pf /etc/samba/smb.conf /etc/samba/smb.conf.bak
 ```
 4. Lihat bagian `workgroup = WORKGROUP`. Untuk mengubah workgroup share dapat dilakukan edit pada `WORKGROUP` sesuaikan dengan nama jaringan workgroup yang ada. *apabila tidak ada, biarkan saja (tidak diedit)
 
-### Share folder dan file tanpa batas
+# Share folder dan file tanpa batas
 Sharing folder dengan tanpa batas yaitu siapa saja boleh mengakses folder ***anonymous*** tanpa harus *login*. Buka file `smb.conf` menggunakan editor `nano /etc/samba/smb.conf`. kemudian tambahkan konfigurasi berikut pada baris paling bawah.
 ```
 [Anonymous]
@@ -88,7 +88,11 @@ read only = no
 sudo service smbd restart
 ```
 
-* Masukan beberapa file pada folder anonymous dan folder secure. kemudian lihat hasil sharing masing - masing.
+## Check hasil
+Masukan beberapa file pada folder anonymous dan folder secure. 
+kemudian lihat hasil sharing masing - masing dengan komputer lain.
+***Windows*** : buka windows-explorer kemudian ketikan `\\alamat ip` pada url bar
+***Linux*** : buka `Files` kemudian pilih `Connect to Server` masukan `smb://alamat ip`
 
 
 
