@@ -84,12 +84,14 @@ menjadi berikut.
 # Installasi Wordpress
 
 1. Download wordpress pada url berikut `http://wordpress.org/latest.tar.gz` dengan menggunakan `wget` :
-`wget -O wordpress.tar.gz http://wordpress.org/latest.tar.gz`
+```
+wget -O wordpress.tar.gz http://wordpress.org/latest.tar.gz
+```
 2. Extract file `wordpress.tar.gz`:
 ```
 tar xzvf wordpress.tar.gz
 ```
-3. Rename folder hasil ekstrak dengan username masing - masing `pwcahyo`
+3. Rename folder hasil ekstrak dengan username masing - masing, dengan contoh username `pwcahyo`
 4. Pindah folder `pwcahyo` kedalam `/opt/lampp/htdocs`:
 ```
 mv pwcahyo /opt/lampp/htdocs
