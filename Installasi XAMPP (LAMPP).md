@@ -16,6 +16,7 @@ chmod +x xampp-linux-x64-7.1.11-0-installer.run
 sudo ./xampp-linux-x64-7.1.11-0-installer.run
 ```
 Kemudian akan keluar konfigurasi sebagai berikut:
+```
 Welcome to the XAMPP Setup Wizard.
 
 ----------------------------------------------------------------------------
