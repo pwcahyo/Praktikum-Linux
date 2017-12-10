@@ -80,7 +80,7 @@ mkdir /home/pwcahyo/home_new
 usermod -d /home/pwcahyo/home_new pwcahyo
 ```
 melihat hasil penggantian direktori home menggunakan `grep -E --color '/home/pwcahyo/home_new' /etc/passwd`.
-- ### Memasukan user account kedalam group dengan usermod
+- ### memasukan user account kedalam group dengan usermod
 Perintah berikut memasukan user `pwcahyo` kedalam primer group `pwcahyo_member`
 ```
 usermod -g pwcahyo_member pwcahyo
@@ -94,7 +94,7 @@ untuk melakukan checking group yang dimiliki `pwcahyo` dapat menggunakan perinta
 ```
 id pwcahyo
 ```
-- ### Mengganti password menggunakan `usermod`
+- ### mengganti password menggunakan `usermod`
 Perintah berikut merupakan contoh perintah penggantian password pada user account `pwcahyo` dengan password baru `linux`
 ```
 usermod -p linux pwcahyo

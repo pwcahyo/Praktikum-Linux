@@ -31,6 +31,7 @@ path = /samba/anonymous
 browsable = yes
 writable = yes
 read only = no
+guest ok = yes
 force user = nobody
 ```
 Ciptakan folder `anonymous` didalam folder `samba`.
