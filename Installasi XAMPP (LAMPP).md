@@ -101,7 +101,8 @@ mv pwcahyo /opt/lampp/htdocs
 ```
 /opt/lampp/bin/./mysql -u root -p
 ```
-Diminta memasukan password ***Dikosongi saja***
+Diminta memasukan password ***Dikosongi saja***.
+
 7. Buat Database Wordpress dengan nama username masing - masing, contoh `pwcahyo`.
 ```
 CREATE DATABASE wordpress_pwcahyo
