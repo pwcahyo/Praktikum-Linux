@@ -112,9 +112,10 @@ CREATE DATABASE wordpress_pwcahyo
 - Username for database : `root`
 - Password for database : ``
 - Host : `localhost`
-- Table setting : `wp_`.
-Atau.
-Copy `wp-config-sample.php` menjadi `wp-config.php` kemudian edit file tersebut `nano /opt/lampp/htdocs/cahyo/wp-config.php` menjadi
+- Table setting : `wp_`
+- Atau Copy `wp-config-sample.php` menjadi `wp-config.php` kemudian edit file tersebut 
+```nano /opt/lampp/htdocs/cahyo/wp-config.php```
+menjadi :
 ```
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
