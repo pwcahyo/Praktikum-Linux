@@ -1,5 +1,4 @@
-Installasi XAMPP (LAMPP)
-========================
+# Installasi XAMPP (LAMPP)
 
 LAMPP adalah web server sederhana yang didalamya sudah tersedia Apache, MariaDB dan PERL. Penggunakan LAMPP tersebut sangatlah sederhana, tidak membutuhkan banyak konfigurasi untuk bisa menjalankannya. Untuk dapat menggunakan LAMPP tersebut maka,
 
@@ -52,7 +51,7 @@ Setup has finished installing XAMPP on your computer.
 ```
 4. Ubah kepemilikan folder htdocs menjadi `775`.
 ```
-sudo chmod -R /opt/lampp/htdocs/
+sudo chmod -R 775 /opt/lampp/htdocs/
 ```
 5. Aktifkan LAMPP dengan menggunakan perintah:
 ```
@@ -66,7 +65,7 @@ untuk restart
 ```
 sudo /opt/lampp/lampp restart
 ```
-7. Untuk melihat berhasil atau tidaknya bisa dicoba dengan mengakses localhost. ketikan `localhost` di url browser. Kemudian ketikan `localhost/phpmyadmin`
+7. Untuk melihat berhasil atau tidaknya bisa dicoba dengan mengakses `localhost`. ketikan `localhost` di url browser. Kemudian untuk melakukan akses ke `phpmyadmin` ketikan `localhost/phpmyadmin`
 8. Apabila mengalami error, maka edit konfigurasi LAMPP pada `httpd-xampp.conf`
 ```
 sudo nano /opt/lampp/etc/extra/httpd-xampp.conf
@@ -81,8 +80,8 @@ menjadi berikut.
 ```
 9. Akses kembali `localhost/phpmyadmin`
 
-Installasi Wordpress
-====================
+
+# Installasi Wordpress
 
 1. Download wordpress pada url berikut `http://wordpress.org/latest.tar.gz` dengan menggunakan `wget` :
 `wget -O wordpress.tar.gz http://wordpress.org/latest.tar.gz`
