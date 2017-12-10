@@ -130,10 +130,10 @@ define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
 ```
 9. Kemudian akses kembali `localhost/pwcahyo`.
-- Masukan Username wordpress
-- Masukan Password
-- Konfirmasi Password
-- Masukan Nama Website
+- Masukan `Username` Wordpress
+- Masukan `Password` Wordpress
+- Konfirmasi `Password` Wordpress
+- Masukan `Nama Website` Wordpress
 
 10. Untuk masuk kedalam administrator `wordpress` ketik `localhost/pwcahyo/wp-admin` kemudian masukan `Username` dan `Password`
 11. Untuk Melihat hasil `Website` ketikan `localhost/pwcahyo` pada address bar web browser.
